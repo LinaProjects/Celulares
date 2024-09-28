@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Celular</title>
+    <link rel="stylesheet" href="/css/Tarjetas.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Tarjeta de Celular -->
+    <div class="card">
+        <!-- Imagen del celular -->
+        <div class="card-img-container">
+            <img src="https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.large.jpg"
+                class="card-img-top" alt="Iphone 14 Pro">
+        </div>
+
+        <!-- Detalles del celular -->
+        <div class="card-body container">
+            <h5 class="card-title">iPhone 14 Pro</h5>
+            <p class="card-text text-justify" id="cardDescription">
+                Descripción: El iPhone 14 Pro es el último dispositivo de Apple, equipado con la última tecnología en
+                cámaras, rendimiento de alta velocidad y pantalla OLED super retina. Diseñado para aquellos que buscan
+                el máximo rendimiento en un smartphone.
+            </p>
+
+            <h6 class="card-subtitle mb-2 text-muted">Especificaciones</h6>
+            <p class="card-text" id="cardSpecifications">
+                Pantalla: 6.1 pulgadas OLED<br>
+                Procesador: A16 Bionic<br>
+                Memoria: 128GB / 256GB / 512GB<br>
+                Cámaras: 48MP principal, 12MP ultra gran angular<br>
+                Batería: 3200 mAh
+            </p>
+
+            <!-- Precio del celular -->
+            <p class="card-text" id="cardPrice"><strong>Precio:</strong> $1,099 USD</p>
+
+            <!-- Calificación -->
+            <div class="rating" id="cardRating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+
+            <!-- Botones CRUD -->
+            <div class="container text-center mt-3">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#updateModal">Actualizar</button>
+                <button class="btn btn-info">Leer</button>
+                <button class="btn btn-danger">Borrar</button>
+            </div>
+
+            <!-- Pie de página -->
+            <div class="container pie-pagina mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Campos de entrada para interacciones CRUD -->
+                        <div class="card-footer">
+                            <input type="text" id="productNameInput" class="form-control mb-2"
+                                placeholder="Nombre del celular...">
+                            <input type="text" id="opinionInput" class="form-control mb-2"
+                                placeholder="Escribe tu opinión...">
+                            <input type="text" id="suggestionInput" class="form-control mb-2"
+                                placeholder="Escribe qué celular te gustaría ver...">
+                            <input type="text" id="websiteInput" class="form-control mb-2"
+                                placeholder="Escribe tu opinión sobre la página web...">
+
+                            <!-- Botón para enviar opiniones -->
+                            <button class="Opiniones.html" onclick="enviarOpiniones()">Enviar Opiniones</button>
+                        </div>
+
+                        <!-- Botón de volver -->
+                        <div class="card-body text-center mt-3">
+                            <a href="http://localhost:3000" class="btn btn-primary">VOLVER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Actualización -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Actualizar Información del Celular</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateForm">
+                        <div class="form-group">
+                            <label for="updateName">Nombre del Celular</label>
+                            <input type="text" class="form-control" id="updateName" placeholder="Nombre del celular">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateDescription">Descripción</label>
+                            <textarea class="form-control" id="updateDescription" rows="3"
+                                placeholder="Descripción del celular"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="updateDisplay">Pantalla</label>
+                            <input id="updateDisplay" type="text" class="form-control" placeholder="Pantalla">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateProcessor">Procesador</label>
+                            <input id="updateProcessor" type="text" class="form-control" placeholder="Procesador">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateRAM">RAM</label>
+                            <input id="updateRAM" type="text" class="form-control" placeholder="RAM">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateStorage">Almacenamiento</label>
+                            <input id="updateStorage" type="text" class="form-control" placeholder="Almacenamiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateCameras">Cámaras</label>
+                            <input id="updateCameras" type="text" class="form-control" placeholder="Cámaras">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateBattery">Batería</label>
+                            <input id="updateBattery" type="text" class="form-control" placeholder="Batería">
+                        </div>
+                        <div class="form-group">
+                            <label for="updatePrice">Precio</label>
+                            <input type="text" class="form-control" id="updatePrice" placeholder="Precio del celular">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery, Popper.js, y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Función para obtener el parámetro "id" de la URL
+        function getParameterByName(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Obtener el ID del producto de la URL
+        const productId = getParameterByName('id');
+
+        // Encontrar el producto en el arreglo
+        const producto = productos.find(p => p.id === productId);
+
+        // Si el producto existe, mostrar los detalles
+        if (producto) {
+            document.getElementById('detalleProducto').innerHTML = `
+                <h1>${producto.nombre}</h1>
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <p>${producto.descripcion}</p>
+                <p><strong>Precio:</strong> ${producto.precio}</p>
+                <p><strong>RAM:</strong> ${producto.ram}</p>
+                <p><strong>Almacenamiento:</strong> ${producto.almacenamiento}</p>
+                <p><strong>Marca:</strong> ${producto.marca}</p>
+                <p><strong>Cámara:</strong> ${producto.camara}</p>
+                <p><strong>Conectividad:</strong> ${producto.conectividad}</p>
+                <p><strong>Pantalla:</strong> ${producto.pantalla}</p>
+                <p><strong>Garantía:</strong> ${producto.garantia}</p>
+            `;
+        } else {
+            document.getElementById('detalleProducto').innerHTML = `<p>Producto no encontrado</p>`;
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var cellPhoneKey = 'cellPhone1'; // Clave única para Tarjeta1
+
+            // Recuperar los datos del almacenamiento local
+            var cellPhone = JSON.parse(localStorage.getItem(cellPhoneKey)) || {
+                name: 'iPhone 14 Pro',
+                description: 'Descripción: El iPhone 14 Pro es el último dispositivo de Apple...',
+                specifications: {
+                    display: '6.1 pulgadas OLED',
+                    processor: 'A16 Bionic',
+                    ram: '6GB',
+                    storage: '128GB / 256GB / 512GB',
+                    cameras: '48MP principal, 12MP ultra gran angular',
+                    battery: '3200 mAh'
+                },
+                price: '$1,099 USD'
+            };
+
+            console.log('CellPhone data:', cellPhone); // Depuración
+
+            // Actualizar la tarjeta con los datos guardados
+            var cardTitle = document.querySelector('.card-title');
+            var cardDescription = document.getElementById('cardDescription');
+            var cardSpecifications = document.getElementById('cardSpecifications');
+            var cardPrice = document.getElementById('cardPrice');
+
+            if (cardTitle) cardTitle.textContent = cellPhone.name;
+            if (cardDescription) cardDescription.innerHTML = cellPhone.description;
+            if (cardSpecifications) cardSpecifications.innerHTML = `
+        Pantalla: ${cellPhone.specifications.display}<br>
+        Procesador: ${cellPhone.specifications.processor}<br>
+        Memoria: ${cellPhone.specifications.ram} / ${cellPhone.specifications.storage}<br>
+        Cámaras: ${cellPhone.specifications.cameras}<br>
+        Batería: ${cellPhone.specifications.battery}
+    `;
+            if (cardPrice) cardPrice.innerHTML = `<strong>Precio:</strong> ${cellPhone.price}`;
+        });
+
+        // Guardar cambios en el almacenamiento local
+        document.getElementById('updateForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var cellPhoneKey = 'cellPhone1'; // Clave única para Tarjeta1
+
+            // Obtener valores de los campos de entrada
+            var name = document.getElementById('updateName').value;
+            var description = document.getElementById('updateDescription').value;
+            var display = document.getElementById('updateDisplay').value;
+            var processor = document.getElementById('updateProcessor').value;
+            var ram = document.getElementById('updateRAM').value;
+            var storage = document.getElementById('updateStorage').value;
+            var cameras = document.getElementById('updateCameras').value;
+            var battery = document.getElementById('updateBattery').value;
+            var price = document.getElementById('updatePrice').value;
+
+            console.log('Form values:', {
+                name, description, display, processor, ram, storage, cameras, battery, price
+            }); // Depuración
+
+            var cellPhone = {
+                name: name || 'Nombre no disponible',
+                description: description || 'Descripción no disponible',
+                specifications: {
+                    display: display || 'Pantalla no disponible',
+                    processor: processor || 'Procesador no disponible',
+                    ram: ram || 'RAM no disponible',
+                    storage: storage || 'Almacenamiento no disponible',
+                    cameras: cameras || 'Cámaras no disponibles',
+                    battery: battery || 'Batería no disponible'
+                },
+                price: price || 'Precio no disponible'
+            };
+
+            console.log('Updated cellPhone data:', cellPhone); // Depuración
+
+            // Actualiza la tarjeta con los nuevos datos
+            var cardTitle = document.querySelector('.card-title');
+            var cardDescription = document.getElementById('cardDescription');
+            var cardSpecifications = document.getElementById('cardSpecifications');
+            var cardPrice = document.getElementById('cardPrice');
+
+            if (cardTitle) cardTitle.textContent = cellPhone.name;
+            if (cardDescription) cardDescription.innerHTML = cellPhone.description;
+            if (cardSpecifications) cardSpecifications.innerHTML = `
+        Pantalla: ${cellPhone.specifications.display}<br>
+        Procesador: ${cellPhone.specifications.processor}<br>
+        Memoria: ${cellPhone.specifications.ram} / ${cellPhone.specifications.storage}<br>
+        Cámaras: ${cellPhone.specifications.cameras}<br>
+        Batería: ${cellPhone.specifications.battery}
+    `;
+            if (cardPrice) cardPrice.innerHTML = `<strong>Precio:</strong> ${cellPhone.price}`;
+
+            // Cerrar el modal
+            $('#updateModal').modal('hide');
+
+            // Guardar la actualización en almacenamiento local
+            localStorage.setItem(cellPhoneKey, JSON.stringify(cellPhone));
+        });
+
+        // Prellenar el modal al abrirlo
+        $('#updateModal').on('show.bs.modal', function () {
+            var cellPhoneKey = 'cellPhone1'; // Clave única para Tarjeta1
+
+            var cellPhone = JSON.parse(localStorage.getItem(cellPhoneKey)) || {
+                name: 'iPhone 14 Pro',
+                description: 'Descripción: El iPhone 14 Pro es el último dispositivo de Apple...',
+                specifications: {
+                    display: '6.1 pulgadas OLED',
+                    processor: 'A16 Bionic',
+                    ram: '6GB',
+                    storage: '128GB / 256GB / 512GB',
+                    cameras: '48MP principal, 12MP ultra gran angular',
+                    battery: '3200 mAh'
+                },
+                price: '$1,099 USD'
+            };
+
+            console.log('Pre-filled modal data:', cellPhone); // Depuración
+
+            document.getElementById('updateName').value = cellPhone.name;
+            document.getElementById('updateDescription').value = cellPhone.description;
+            document.getElementById('updateDisplay').value = cellPhone.specifications.display;
+            document.getElementById('updateProcessor').value = cellPhone.specifications.processor;
+            document.getElementById('updateRAM').value = cellPhone.specifications.ram;
+            document.getElementById('updateStorage').value = cellPhone.specifications.storage;
+            document.getElementById('updateCameras').value = cellPhone.specifications.cameras;
+            document.getElementById('updateBattery').value = cellPhone.specifications.battery;
+            document.getElementById('updatePrice').value = cellPhone.price;
+        });
+
+    </script>
+</body>
+
+</html>

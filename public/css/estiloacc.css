@@ -1,0 +1,124 @@
+/* Reset de algunos estilos básicos */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 100px;
+    vertical-align: middle;
+}
+
+header h1 {
+    display: inline;
+    margin-left: 15px;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+.accessory-info {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.accessories {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.accessory-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.accessory {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.accessory img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.accessory h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.accessory p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.accessory a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.accessory a:hover {
+    text-decoration: underline;
+}
+
+.brands {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brand {
+    flex: 1 1 calc(25% - 20px);
+}
+
+.brand h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.brand ul {
+    list-style: none;
+    padding: 0;
+}
+
+.brand li {
+    margin-bottom: 10px;
+}
+
+.brand a {
+    color: #007bff;
+}

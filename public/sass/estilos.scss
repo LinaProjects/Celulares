@@ -1,0 +1,165 @@
+$background-color: #d4cccc;
+$primary-color: #fff;
+$second-color: #111;
+$base-color: #43db66;
+$border-hr: rgba($base-color, 1); 
+
+$text-color: #f7f5f5;
+
+
+body {
+    color: $background-color;
+}
+
+
+@mixin theme($color: #fff, $font-size: 35px) {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: $font-size;
+    color: $color;
+    font-weight: bold;
+}
+
+h2 {
+    @include theme;
+}
+
+.estreno{
+    @include theme($color:#11e566,$font-size: 24px);
+}
+
+
+hr {
+    border: 1px solid $border-hr;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.container {
+    background-color: $second-color;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.alphabet-filter {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-right: 2%;
+        display: inline-flex;
+    }
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        background-color: #28a745;
+        color: #fff;
+    }
+
+}
+
+.card {
+    height: auto;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 20px;
+    background-color: rgba(55, 53, 53, 0.7) !important;
+    color: #f7f5f5;
+    box-shadow: 0 4px 6px rgba(24, 213, 150, 0.1);
+
+    .card-img-container {
+        max-height: 15rem;
+        overflow: hidden;
+        box-sizing: unset;
+    }
+
+    .card-img-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card-text {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+    }
+
+    .card-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+}
+
+
+.btn {
+    background-color: #43db66;
+    border-color: #43db66;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+}
+
+.footer {
+    background-color: #3b3a3a;
+    color: $primary-color;
+
+    h5 {
+        color: #f0f5f0;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    a:hover {
+        color: #f0f0f0;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+    ul li a {
+        text-decoration: none;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .row {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}

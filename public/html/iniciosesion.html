@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="/css/sesion.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Contenedor para el logo -->
+        <div class="logo">
+            <img src="https://cdn.icon-icons.com/icons2/1580/PNG/512/2849835-call-cell-communication-interface-multimedia-phone-telephone_108000.png" alt="Logo de la Página">
+        </div>
+        <h2>Inicio de Sesión</h2>
+        <form id="login-form">
+            <input type="text" id="username" name="username" placeholder="Nombre de usuario o correo" required>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+            <div class="error-message" id="error-message"></div> <!-- Contenedor para mensajes de error -->
+        </form>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario de manera tradicional
+
+            // Obtener datos del formulario
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Enviar datos al servidor usando fetch
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Redirige o muestra un mensaje de éxito
+                    alert('Inicio de sesión exitoso');
+                    window.location.href = '/admin'; // Redirigir al panel de administración
+                } else {
+                    // Muestra un mensaje de error
+                    document.getElementById('error-message').textContent = 'Usuario o contraseña incorrectos';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('error-message').textContent = 'Error al conectar con el servidor';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones</title>
+    <link rel="stylesheet" href="/css/estiloop.css">
+</head>
+<body>
+    <h1>Opiniones de los usuarios</h1>
+
+    <div id="opinionesContainer"></div>
+
+    <div class="button-container">
+        <button onclick="volver()">Volver</button>
+        <button onclick="limpiarDatos()">Limpiar Datos</button>
+    </div>
+
+    <script>
+        // Obtener las opiniones guardadas en el almacenamiento local
+        var storedOpiniones = JSON.parse(localStorage.getItem("opiniones")) || [];
+    
+        // Mostrar las opiniones en la página
+        var opinionesContainer = document.getElementById("opinionesContainer");
+
+        storedOpiniones.forEach(function(opinion) {
+            opinionesContainer.innerHTML += "<div class='opinion'>" +
+                                            "<p>Nombre del celular: " + opinion.productName + "</p>" +
+                                            "<p>Opinión: " + opinion.opinion + "</p>" +
+                                            "<p>Celular que te gustaría ver: " + opinion.suggestion + "</p>" +
+                                            "<p>Opinión sobre la página web: " + opinion.website + "</p>" +
+                                            "</div>";
+        });
+
+        function volver() {
+            window.location.href = "index.html";
+        }
+
+        function limpiarDatos() {
+            localStorage.removeItem("opiniones");
+            opinionesContainer.innerHTML = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* Estilos para el contenedor principal */
+body {
+    margin: 20px; /* Márgenes alrededor de la página */
+    padding: 0;
+    background-color: #f5f5f5; /* Fondo claro */
+    font-family: 'Arial', sans-serif; /* Tipografía */
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border: 1px solid #127ce6; /* Borde de la tarjeta */
+    border-radius: .25rem; /* Borde redondeado */
+    transition: box-shadow .3s ease-in-out, transform .3s ease-in-out; /* Transición para la sombra y el zoom */
+    margin-bottom: 20px; /* Espacio inferior entre tarjetas */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+    display: flex; /* Flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza los elementos en columna */
+    max-width: 400px; /* Ancho máximo de la tarjeta */
+    margin: auto; /* Centra la tarjeta en la página */
+    padding: 15px; /* Espaciado interno de la tarjeta */
+}
+
+/* Contenedor de la imagen */
+.card-img-container {
+    width: 7cm; /* Ancho de la imagen */
+    height: 10cm; /* Altura de la imagen */
+    display: flex; /* Activamos el modelo de caja flexible */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
+    margin: auto; /* Centramos el contenedor */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    border-radius: 0.25rem; /* Borde redondeado */
+    border: 1px solid #ddd; /* Borde alrededor de la imagen */
+}
+
+/* Imagen en la tarjeta */
+.card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Ajusta y recorta la imagen */
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 0.5rem; /* Espacio interno de la tarjeta */
+    display: flex; /* Flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: space-between; /* Espacia uniformemente los elementos */
+    text-align: center; /* Centra el texto */
+}
+
+/* Título de la tarjeta */
+.card-title {
+    color: #333333; /* Color del texto */
+    font-size: 1rem; /* Tamaño del título */
+    font-weight: 600; /* Grosor del título */
+    margin-bottom: 5px; /* Espacio inferior al título */
+}
+
+/* Texto de la tarjeta */
+.card-text {
+    font-size: 0.9rem; /* Tamaño del texto */
+    color: #555555; /* Color del texto */
+    margin-bottom: 10px; /* Espacio inferior al texto */
+}
+
+/* Pie de la tarjeta */
+.card-footer {
+    padding: 0.5rem; /* Espacio interno del pie de tarjeta */
+    background-color: #f2f5f8; /* Fondo del pie de tarjeta */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para los botones */
+.btn-primary {
+    color: #fff;
+    background-color: #e8ecf2;
+    border-color: #f2f4f7;
+    font-size: 0.8rem; /* Tamaño de la fuente más pequeño */
+    font-weight: 300;
+    padding: 0.25rem 0.5rem; /* Relleno reducido */
+    border-radius: 4px; /* Borde redondeado más pequeño */
+    transition: all 0.3s ease;
+    display: inline-block; /* Ajusta el ancho al contenido */
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color más oscuro en el hover */
+    border-color: #004085; /* Color del borde en el hover */
+
+}
+
+.btn-primary:hover {
+    color: #131212;
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilos para los subtítulos */
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #405fdc; /* Color del texto */
+    margin-bottom: 5px; /* Espacio inferior al subtítulo */
+}
+
+/* Estilos para la calificación */
+.rating {
+    margin-bottom: 10px; /* Espacio inferior al bloque de estrellas */
+}
+
+/* Estilos para las estrellas */
+.star {
+    color: #eca43e; /* Color de las estrellas */
+    font-size: 1.2rem; /* Tamaño de las estrellas */
+}
+
+/* Estilos para el pie de página */
+.pie-pagina {
+    margin-top: 30px; /* Espacio superior para separar de las tarjetas */
+    background-color: #f1f1f1; /* Color de fondo para el pie de página */
+    padding: 15px; /* Espaciado interno dentro del contenedor del pie de página */
+    border-radius: 5px; /* Borde redondeado para el contenedor del pie de página */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para el pie de página */
+}
+
+/* Estilos para los campos de texto en el pie de página */
+.card-footer input[type="text"] {
+    width: 80%; /* El campo de texto ocupa todo el ancho */
+    margin-bottom: 10px; /* Espacio inferior entre los campos de texto */
+    padding: .375rem .75rem; /* Espaciado interno en los campos de texto */
+    font-size: 0.9rem; /* Tamaño de la fuente de los campos de texto */
+    border-radius: .25rem; /* Borde redondeado */
+    border: 1px solid #ddd; /* Borde del campo de texto */
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .btn-warning {
+    background-color: #2f58ca;
+    color: #d5e4f3;
+  }
+  
+  .btn-warning:hover {
+    background-color: #3862d4;
+  }
+  
+  .btn-info {
+    background-color: #2f58ca;
+    color: #fff;
+  }
+  
+  .btn-info:hover {
+    background-color: #2f58ca;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }

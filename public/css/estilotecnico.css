@@ -1,0 +1,144 @@
+/* Estilo Global */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+}
+
+header {
+  background-color: #1E90FF;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid #FFFFFF;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+header .logo img {
+  height: 60px;
+  width: 60px;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 2.5em;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.service-info {
+  margin-bottom: 40px;
+}
+.service-info h2 {
+  color: #1E90FF;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.service-info p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #DDDDDD;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services {
+  padding: 20px 0;
+}
+.services h2 {
+  color: #1E90FF;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.services .service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: start;
+}
+.services .service {
+  background-color: #1C1C1C;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+}
+.services .service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+.services .service img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+.services .service img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+.services .service h3 {
+  color: #1E90FF;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.services .service p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #DDDDDD;
+  margin: 0;
+}
+.services .service:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(30, 144, 255, 0.2) 0%, rgba(30, 144, 255, 0) 70%);
+  transition: all 0.5s;
+  z-index: 1;
+}
+.services .service:hover:before {
+  left: 0;
+}
+
+footer {
+  background-color: #1E90FF;
+  padding: 15px;
+  text-align: center;
+  border-top: 4px solid #FFFFFF;
+}
+footer p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: #121212;
+  text-decoration: underline;
+}/*# sourceMappingURL=estilotecnico.css.map */

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: "Nunito", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f2f3f4;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    color: #000000;
+    /* Cambia este valor por el color que desees */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    color: #003366;
+    /* Azul oscuro */
+
+
+
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Título */
+.estrenos {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-top: 20px;
+}
+
+/* Filtro por marcas */
+.brand-filter {
+    background: #f5f7f8;
+    border: 1px solid #679fd0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand-filter h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.brand-filter ul {
+    padding-left: 0;
+}
+
+.brand-filter li {
+    margin-bottom: 10px;
+}
+
+.brand-filter a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.brand-filter a:hover {
+    text-decoration: underline;
+}
+
+/* Listado de productos */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background: #f9f6f6;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-item h5 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.product-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-item .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f0f3f5;
+    margin-top: 10px;
+}
+
+/* Espaciado */
+.mb-4 {
+    margin-bottom: 20px !important;
+}
+
+.mt-4 {
+    margin-top: 20px !important;
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: #75a7e0;
+    color: #007bff;
+    padding: 40px 20px;
+    border-top: 1px solid #007bff;
+}
+
+.footer h5 {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.footer h6 {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: #007bff;
+}
+
+.footer .text-center {
+    margin-bottom: 20px;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.footer .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.footer .list-unstyled img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.footer .row {
+    margin-bottom: 20px;
+}
+
+.footer .row ul {
+    padding-left: 0;
+}
+
+.footer .row ul li {
+    margin-bottom: 10px;
+}
+
+.footer .row ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer .row ul li a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.footer .mb-0 {
+    margin-bottom: 0;
+}
+
+.footer .container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .footer .row {
+        text-align: center;
+    }
+
+    .footer .col-md-6 {
+        margin-bottom: 20px;
+        max-width: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: none;
+    }
+}

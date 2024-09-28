@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELLWD! </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/estilosSASS.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <a class="navbar-brand" href="#">CELLWD - ADQUIERE !</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/marcas">Marcas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/accesorios">Accesorios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tecnico">Servicio Tecnico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pagos">Metodos de pago</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/iniciosesion">Administración</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Filtro y listado de productos -->
+    <div class="container mt-3">
+        <div class="row">
+            <!-- Filtro por marcas -->
+            <div class="col-md-3 mb-4">
+                <div class="brand-filter">
+                    <h4>Filtrar por Marca</h4>
+                    <ul class="list-unstyled">
+                        <li><input type="checkbox" id="brand1" name="brand" value="Iphone">
+                            <label for="brand1">Iphone</label>
+                        </li>
+                        <li><input type="checkbox" id="brand2" name="brand" value="Samsung">
+                            <label for="brand2">Samsung</label>
+                        </li>
+                        <li><input type="checkbox" id="brand3" name="brand" value="Xiaomi">
+                            <label for="brand3">Xiaomi</label>
+                        </li>
+                        <li><input type="checkbox" id="brand4" name="brand" value="Huawei">
+                            <label for="brand4">Huawei</label>
+                        </li>
+                        <li><input type="checkbox" id="brand5" name="brand" value="Oppo">
+                            <label for="brand5">Oppo</label>
+                        </li>
+                        <li><input type="checkbox" id="brand6" name="brand" value="Google">
+                            <label for="brand5">Google</label>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h4>Rango de Precio</h4>
+                    <ul class="list-unstyled">
+                        <li><input type="checkbox" id="price1" name="price" value="0-199">
+                            <label for="price1">$0 - $199</label>
+                        </li>
+                        <li><input type="checkbox" id="price2" name="price" value="200-399">
+                            <label for="price2">$200 - $399</label>
+                        </li>
+                        <li><input type="checkbox" id="price3" name="price" value="400-699">
+                            <label for="price3">$400 - $699</label>
+                        </li>
+                        <li><input type="checkbox" id="price4" name="price" value="700-800">
+                            <label for="price4">$700 - $800</label>
+                        </li>
+                        <li><input type="checkbox" id="price5" name="price" value="800-999">
+                            <label for="price5">$800-999</label>
+                        </li>
+                        <li><input type="checkbox" id="price6" name="price" value="1000-3000">
+                            <label for="price5">$1000-3000</label>
+                        </li>
+                    </ul>
+                    </ul>
+                    <hr>
+                    <h4>Memoria Interna</h4>
+                    <ul class="list-unstyled">
+                        <li><input type="checkbox" id="storage1" name="storage" value="32GB">
+                            <label for="storage1">32 GB</label>
+                        </li>
+                        <li><input type="checkbox" id="storage2" name="storage" value="64GB">
+                            <label for="storage2">64 GB</label>
+                        </li>
+                        <li><input type="checkbox" id="storage3" name="storage" value="128GB">
+                            <label for="storage3">128 GB</label>
+                        </li>
+                        <li><input type="checkbox" id="storage4" name="storage" value="256GB">
+                            <label for="storage4">256 GB</label>
+                        </li>
+                        <li><input type="checkbox" id="storage5" name="storage" value="512GB">
+                            <label for="storage5">512 GB</label>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h4>Cámara Frontal</h4>
+                    <ul class="list-unstyled">
+                        <li><input type="checkbox" id="camera1" name="camera" value="12MP">
+                            <label for="camera1">12MP</label>
+                        </li>
+                        <li><input type="checkbox" id="camera2" name="camera" value="16MP">
+                            <label for="camera2">16MP</label>
+                        </li>
+                        <li><input type="checkbox" id="camera3" name="camera" value="24MP">
+                            <label for="camera3">24MP</label>
+                        </li>
+                        <li><input type="checkbox" id="camera4" name="camera" value="48MP">
+                            <label for="camera4">48MP</label>
+                        </li>
+                        <li><input type="checkbox" id="camera5" name="camera" value="64MP">
+                            <label for="camera5">64MP</label>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h4>Conectividad</h4>
+                    <ul class="list-unstyled">
+                        <li><input type="checkbox" id="connect1" name="connect" value="4G">
+                            <label for="connect1">4G</label>
+                        </li>
+                        <li><input type="checkbox" id="connect2" name="connect" value="5G">
+                            <label for="connect2">5G</label>
+                        </li>
+                        <li><input type="checkbox" id="connect3" name="connect" value="Wi-Fi 6">
+                            <label for="connect3">Wi-Fi 6</label>
+                        </li>
+                        <li><input type="checkbox" id="connect4" name="connect" value="Bluetooth 5.0">
+                            <label for="connect4">Bluetooth 5.0</label>
+                        </li>
+                        <li><input type="checkbox" id="connect5" name="connect" value="NFC">
+                            <label for="connect5">NFC</label>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h4>Memoria RAM</h4>
+                    <ul class="list-unstyled">
+                        <li><input type="checkbox" id="ram1" name="ram" value="2GB">
+                            <label for="ram1">2 GB</label>
+                        </li>
+                        <li><input type="checkbox" id="ram2" name="ram" value="4GB">
+                            <label for="ram2">4 GB</label>
+                        </li>
+                        <li><input type="checkbox" id="ram3" name="ram" value="6GB">
+                            <label for="ram3">6 GB</label>
+                        </li>
+                        <li><input type="checkbox" id="ram4" name="ram" value="8GB">
+                            <label for="ram4">8 GB</label>
+                        </li>
+                        <li><input type="checkbox" id="ram5" name="ram" value="12GB">
+                            <label for="ram5">12 GB</label>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h4>Tipo de Pantalla</h4>
+                    <ul class="list-unstyled">
+                        <li><input type="checkbox" id="screen1" name="screen" value="LCD">
+                            <label for="screen1">LCD</label>
+                        </li>
+                        <li><input type="checkbox" id="screen2" name="screen" value="OLED">
+                            <label for="screen2">OLED</label>
+                        </li>
+                        <li><input type="checkbox" id="screen3" name="screen" value="AMOLED">
+                            <label for="screen3">AMOLED</label>
+                        </li>
+                        <li><input type="checkbox" id="screen4" name="screen" value="Super AMOLED">
+                            <label for="screen4">Super AMOLED</label>
+                        </li>
+                        <li><input type="checkbox" id="screen5" name="screen" value="IPS LCD">
+                            <label for="screen5">IPS LCD</label>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h4>Rango de Garantía</h4>
+                    <ul class="list-unstyled">
+                        <li><input type="checkbox" id="warranty1" name="warranty" value="1year">
+                            <label for="warranty1">1 Año</label>
+                        </li>
+                        <li><input type="checkbox" id="warranty2" name="warranty" value="2years">
+                            <label for="warranty2">2 Años</label>
+                        </li>
+                        <li><input type="checkbox" id="warranty3" name="warranty" value="3years">
+                            <label for="warranty3">3 Años</label>
+                        </li>
+                        <li><input type="checkbox" id="warranty4" name="warranty" value="4years">
+                            <label for="warranty4">4 Años</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Grid de celulares -->
+            <div class="col-md-9">
+                <div class="pl-estilo1">
+
+                    <h2>LOS MAS VENDIDOS</h2>
+                    <hr>
+                    <div class="container-tarjetas">
+                        <!-- Primera fila -->
+                        <div id="product-container">
+                            <!-- <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://www.apple.com/newsroom/imagens/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.large.jpg" class="card-img-top" alt="iPhone 14 Pro">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">iPhone 14 Pro</h5>
+                                    <p class="card-text">El iPhone 14 Pro lleva la innovación al siguiente nivel con su
+                                        pantalla Super Retina
+                                        XDR de 6.1 pulgadas, Dynamic Island, y el chip A16 Bionic...</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$1099.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 6GB</span> |
+                                            <span>Almacenamiento: 128GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="javascript:void(0);" class="btn btn-primary"
+                                        onclick="goToDetails('iphone-14-pro')">Ver
+                                        Detalles</a>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <!-- Segunda Tarjeta -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Xiaomi" data-price="300"
+                            data-storage="64GB" data-camera="64MP" data-connect="4G" data-ram="4GB" data-screen="AMOLED"
+                            data-warranty="2years">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://technologystore2006.com/wp-content/uploads/2022/02/xiamomi-note11-azul-128.webp"
+                                        class="card-img-top" alt="Xiaomi Redmi Note 11">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Xiaomi Redmi Note 11</h5>
+                                    <p class="card-text">Un teléfono económico con una pantalla AMOLED de 6.43 pulgadas,
+                                        cámara
+                                        cuádruple de 50 MP y una batería de 5000 mAh para un uso prolongado.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$300</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 4GB</span> |
+                                            <span>Almacenamiento: 64GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta2" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Tercera -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Samsung" data-price="349.99"
+                            data-storage="128GB" data-camera="64MP" data-connect="5G" data-ram="6GB"
+                            data-screen="Super AMOLED" data-warranty="2years">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://m.media-amazon.com/images/I/71D604+9XcL._AC_SL1000_.jpg"
+                                        class="card-img-top" alt="Samsung Galaxy A53">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Samsung Galaxy A53</h5>
+                                    <p class="card-text">El Galaxy A53 ofrece un equilibrio perfecto entre rendimiento y
+                                        precio,
+                                        con una pantalla Super AMOLED de 6.5 pulgadas y una cámara de 64 MP.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$349.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 6GB</span> |
+                                            <span>Almacenamiento: 128GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta3" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Cuarta -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Samsung" data-price="1199.99"
+                            data-storage="256GB" data-camera="200MP" data-connect="5G" data-ram="12GB"
+                            data-screen="Dynamic AMOLED 2X" data-warranty="2years">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://www.phonelectrics.com/cdn/shop/files/SamsungGalaxyS23Ultra-1_c0fcad44-664a-479e-9c85-a8d6b9f73714_1000x1000.jpg?v=1684266645"
+                                        class="card-img-top" alt="Samsung Galaxy S23 Ultra">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Samsung Galaxy S23 Ultra</h5>
+                                    <p class="card-text">El Galaxy S23 Ultra ofrece lo mejor de Samsung con una pantalla
+                                        Dynamic
+                                        AMOLED de 6.8 pulgadas, S Pen integrado y una cámara de 108 MP.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$1199.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 12GB</span> |
+                                            <span>Almacenamiento: 256GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta4" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Quinta -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Google" data-price="899.99"
+                            data-storage="128GB" data-camera="50MP" data-connect="5G" data-ram="12GB" data-screen="OLED"
+                            data-warranty="2years">
+
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://imei.org/storage/files/images/11339/thumb/google-pixel-7-pro.png"
+                                        class="card-img-top" alt="Google Pixel 7 Pro">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Google Pixel 7 Pro</h5>
+                                    <p class="card-text">El Google Pixel 7 Pro ofrece la mejor experiencia de Android
+                                        puro
+                                        con
+                                        una cámara líder en su clase y un rendimiento excepcional.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$899.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 8GB</span> |
+                                            <span>Almacenamiento: 128GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta5" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Sexta -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="OnePlus" data-price="799.99"
+                            data-storage="256GB" data-camera="48MP" data-connect="5G" data-ram="8GB"
+                            data-screen="AMOLED" data-warranty="2years">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://co.celulares.com/fotos/oneplus-10-pro-2-93858-g-alt.jpg"
+                                        class="card-img-top" alt="OnePlus 10 Pro">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">OnePlus 10 Pro</h5>
+                                    <p class="card-text">El OnePlus 10 Pro ofrece un rendimiento increíble con su
+                                        procesador
+                                        Snapdragon 8 Gen 1 y una pantalla Fluid AMOLED de 6.7 pulgadas.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$799.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 8GB</span> |
+                                            <span>Almacenamiento: 128GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta6" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Séptima -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Iphone" data-price="1099.99"
+                            data-storage="128GB" data-camera="12MP" data-connect="5G" data-ram="6GB"
+                            data-screen="Super AMOLED" data-warranty="1year">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://m.media-amazon.com/images/I/61i8Vjb17SL.jpg" class="card-img-top"
+                                        alt="iPhone 13 Pro Max">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">iPhone 13 Pro Max</h5>
+                                    <p class="card-text">El iPhone 13 Pro Max combina un rendimiento insuperable con una
+                                        batería
+                                        de larga duración y una pantalla Super Retina XDR de 6.7 pulgadas.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$1099.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 6GB</span> |
+                                            <span>Almacenamiento: 256GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta7" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Octava -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Sony" data-price="1299.99"
+                            data-storage="256GB" data-camera="12MP" data-connect="5G" data-ram="12GB" data-screen="OLED"
+                            data-warranty="2years">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://m.media-amazon.com/images/I/51GZMxvwFbL._AC_SL1500_.jpg"
+                                        class="card-img-top" alt="Sony Xperia 1 IV">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Sony Xperia 1 IV</h5>
+                                    <p class="card-text">El Sony Xperia 1 IV ofrece una pantalla 4K OLED de 6.5 pulgadas
+                                        y
+                                        un
+                                        sistema de cámara triple con capacidad de grabación en 4K a 120fps.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$1299.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 12GB</span> |
+                                            <span>Almacenamiento: 512GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta8" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Novena -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Huawei" data-price="899.99"
+                            data-storage="256GB" data-camera="50MP" data-connect="5G" data-ram="8GB" data-screen="OLED"
+                            data-warranty="2years">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://m.media-amazon.com/images/I/617X41AgpzL._AC_SL1500_.jpg"
+                                        class="card-img-top" alt="Huawei P50 Pro">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Huawei P50 Pro</h5>
+                                    <p class="card-text">El Huawei P50 Pro destaca por su impresionante cámara cuádruple
+                                        de
+                                        50
+                                        MP, pantalla OLED de 6.6 pulgadas y un diseño elegante.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$899.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 8GB</span> |
+                                            <span>Almacenamiento: 256GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta9" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Décima -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Oppo" data-price="1099.99"
+                            data-storage="256GB" data-camera="50MP" data-connect="5G" data-ram="12GB"
+                            data-screen="AMOLED" data-warranty="2years">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://co.celulares.com/fotos/oppo-find-x5-pro-93548-g-alt.jpg"
+                                        class="card-img-top" alt="Oppo Find X5 Pro">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Oppo Find X5 Pro</h5>
+                                    <p class="card-text">El Oppo Find X5 Pro ofrece una pantalla AMOLED de 6.7 pulgadas
+                                        y
+                                        una
+                                        cámara de 50 MP con estabilización óptica para fotos y videos nítidos.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$1099.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 12GB</span> |
+                                            <span>Almacenamiento: 256GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta10" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Once -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Xiaomi" data-price="749.99"
+                            data-storage="256GB" data-camera="50MP" data-connect="5G" data-ram="12GB"
+                            data-screen="AMOLED" data-warranty="2years">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://www.losdistribuidores.com/wp-content/uploads/2023/05/xiaomi-12-pro-2.webp"
+                                        class="card-img-top" alt="Xiaomi 12 Pro">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Xiaomi 12 Pro</h5>
+                                    <p class="card-text">El Xiaomi 12 Pro ofrece una pantalla AMOLED de 6.73 pulgadas
+                                        con
+                                        una
+                                        tasa de refresco de 120Hz y un potente sistema de cámara triple de 50 MP.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$749.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 8GB</span> |
+                                            <span>Almacenamiento: 128GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta11" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Doce -->
+                        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4 product" data-brand="Motorola" data-price="799.99"
+                            data-storage="256GB" data-camera="50MP" data-connect="5G" data-ram="12GB"
+                            data-screen="AMOLED" data-warranty="2years">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="https://i.blogs.es/602692/motorola-edge-30-pro-trasera/450_1000.jpg"
+                                        class="card-img-top" alt="Motorola Edge 30 Pro">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Motorola Edge 30 Pro</h5>
+                                    <p class="card-text">El Motorola Edge 30 Pro ofrece un excelente rendimiento con su
+                                        procesador Snapdragon 8 Gen 1 y una pantalla OLED de 6.7 pulgadas.</p>
+                                    <div class="card-details">
+                                        <p class="card-price">$799.99</p>
+                                        <p class="card-specs">
+                                            <span>RAM: 8GB</span> |
+                                            <span>Almacenamiento: 128GB</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="/Tarjeta12" class="btn btn-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenedor para la tarjeta -->
+            <div id="cardContainer" class="card-container">
+                <!-- Tarjeta de Celular -->
+                <div class="card">
+                    <!-- Imagen del celular -->
+                    <div class="card-img-container">
+                        <img src="https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.large.jpg"
+                            class="card-img-top" alt="Iphone 14 Pro">
+                    </div>
+
+                    <!-- Detalles del celular -->
+                    <div id="mostrar" class="card-body container">
+                        <h5 class="card-title">iPhone 14 Pro</h5>
+                        
+                        <p class="card-text text-justify" id="cardDescription">
+                            Descripción: El iPhone 14 Pro es el último dispositivo de Apple, equipado con la última
+                            tecnología en
+                            cámaras, rendimiento de alta velocidad y pantalla OLED super retina. Diseñado para aquellos
+                            que buscan
+                            el máximo rendimiento en un smartphone.
+                        </p>
+                        
+                        <h6 class="card-subtitle mb-2 text-muted">Especificaciones</h6>
+                        <p class="card-text" id="cardSpecifications">
+                            Pantalla: 6.1 pulgadas OLED<br>
+                            Procesador: A16 Bionic<br>
+                            Memoria: 128GB / 256GB / 512GB<br>
+                            Cámaras: 48MP principal, 12MP ultra gran angular<br>
+                            Batería: 3200 mAh
+                        </p>
+                        
+                        <!-- Precio del celular -->
+                        <p class="card-text" id="cardPrice"><strong>Precio:</strong> $1,099 USD</p>
+
+                        <!-- Calificación -->
+                        <div class="rating" id="cardRating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+
+                        <!-- Botones CRUD -->
+                        <div class="container text-center mt-3">
+                            <button id="toggleButton1" class="btn btn-warning">Actualizar</button>
+                            <button class="btn btn-info">Leer</button>
+                            <button id="deleteButton" class="btn btn-danger">Borrar</button>
+                        </div>
+
+                        <!-- Pie de página -->
+                        <div class="container pie-pagina mt-4">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- Campos de entrada para interacciones CRUD -->
+                                    <div class="card-footer">
+                                        <input type="text" id="productNameInput" class="form-control mb-2"
+                                            placeholder="Nombre del celular...">
+                                        <input type="text" id="opinionInput" class="form-control mb-2"
+                                            placeholder="Escribe tu opinión...">
+                                        <input type="text" id="suggestionInput" class="form-control mb-2"
+                                            placeholder="Escribe qué celular te gustaría ver...">
+                                        <input type="text" id="websiteInput" class="form-control mb-2"
+                                            placeholder="Escribe tu opinión sobre la página web...">
+
+                                        <!-- Botón para enviar opiniones -->
+                                        <button class="Opiniones.html" onclick="enviarOpiniones()">Enviar
+                                            Opiniones</button>
+                                    </div>
+
+                                    <!-- Botón de volver -->
+                                    <div class="card-body text-center mt-3">
+                                        <a id="volver" class="btn btn-primary">VOLVER</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="oculto" class="card-body container">
+                        <div class="form-group">
+                            <label for="updateName">Nombre del Celular</label>
+                            <input type="text" class="form-control" id="updateName"
+                                placeholder="Nombre del celular">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="updateDescription">Descripción</label>
+                            <textarea class="form-control" id="updateDescription" rows="3"
+                                placeholder="Descripción del celular"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="updateDisplay">Pantalla</label>
+                            <input id="updateDisplay" type="text" class="form-control"
+                                placeholder="Pantalla">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateProcessor">Procesador</label>
+                            <input id="updateProcessor" type="text" class="form-control"
+                                placeholder="Procesador">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateRAM">RAM</label>
+                            <input id="updateRAM" type="text" class="form-control" placeholder="RAM">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateStorage">Almacenamiento</label>
+                            <input id="updateStorage" type="text" class="form-control"
+                                placeholder="Almacenamiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateCameras">Cámaras</label>
+                            <input id="updateCameras" type="text" class="form-control"
+                                placeholder="Cámaras">
+                        </div>
+                        <div class="form-group">
+                            <label for="updateBattery">Batería</label>
+                            <input id="updateBattery" type="text" class="form-control"
+                                placeholder="Batería">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="updatePrice">Precio</label>
+                            <input type="text" class="form-control" id="updatePrice"
+                                placeholder="Precio del celular">
+                        </div>
+
+                        <div class="container text-center mt-3">
+                            <button id="toggleButton2" class="btn btn-warning">Guardar</button>
+                            <button id="deleteButton" class="btn btn-danger">Borrar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal de Actualización -->
+                <!-- <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="updateModalLabel">Actualizar Información del Celular</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="updateForm">
+                                    <div class="form-group">
+                                        <label for="updateName">Nombre del Celular</label>
+                                        <input type="text" class="form-control" id="updateName"
+                                            placeholder="Nombre del celular">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="updateDescription">Descripción</label>
+                                        <textarea class="form-control" id="updateDescription" rows="3"
+                                            placeholder="Descripción del celular"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="updateDisplay">Pantalla</label>
+                                        <input id="updateDisplay" type="text" class="form-control"
+                                            placeholder="Pantalla">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="updateProcessor">Procesador</label>
+                                        <input id="updateProcessor" type="text" class="form-control"
+                                            placeholder="Procesador">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="updateRAM">RAM</label>
+                                        <input id="updateRAM" type="text" class="form-control" placeholder="RAM">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="updateStorage">Almacenamiento</label>
+                                        <input id="updateStorage" type="text" class="form-control"
+                                            placeholder="Almacenamiento">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="updateCameras">Cámaras</label>
+                                        <input id="updateCameras" type="text" class="form-control"
+                                            placeholder="Cámaras">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="updateBattery">Batería</label>
+                                        <input id="updateBattery" type="text" class="form-control"
+                                            placeholder="Batería">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="updatePrice">Precio</label>
+                                        <input type="text" class="form-control" id="updatePrice"
+                                            placeholder="Precio del celular">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer col-12">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <h5 class="text-center">Últimos Modelos de Celulares</h5>
+                    <p class="text-center">Descubre las novedades y los dispositivos más recientes en
+                        nuestra tienda.</p>
+                    <p class="text-center">&copy; 2024 Tienda de Celulares. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Enlaces Rápidos</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Acerca de</a></li>
+                                <li><a href="#">Productos</a></li>
+                                <li><a href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Redes Sociales</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.facebook.com/"><img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/220px-Logo_de_Facebook.png"
+                                            alt="Facebook"></a></li>
+                                <li><a href="https://twitter.com/"><img
+                                            src="https://www.lavanguardia.com/andro4all/hero/2023/07/icono-app-iphone.jpg?width=768&aspect_ratio=16:9&format=nowebp"
+                                            alt="Twitter"></a></li>
+                                <li><a href="https://www.instagram.com/"><img src="/img/instagram.webp"
+                                            alt="Instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <p>Celulares recomendados en nuestra tienda:</p>
+                    <ul>
+                        <li><a href="/Tarjeta1">iPhone 14 Pro</a></li>
+                        <li><a href="/Tarjeta4">Samsung Galaxy S23</a></li>
+                        <li><a href="/Tarjeta5">Google Pixel 7</a></li>
+                        <!-- Agrega más celulares recomendados según sea necesario -->
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h6>Recursos útiles</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.gsmarena.com/">Comparativas y análisis: GSMArena</a></li>
+                        <li><a href="https://www.phonearena.com/">Noticias de móviles: PhoneArena</a></li>
+                        <li><a href="https://www.androidauthority.com/">Guías y tutoriales: Android
+                                Authority</a></li>
+                    </ul>
+                    <p class="mb-0">Contáctanos: celulares@tienda.com | Teléfono: (320) 456-7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS y Script personalizado -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="/js/productos.js"></script>
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

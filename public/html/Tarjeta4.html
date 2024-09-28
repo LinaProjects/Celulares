@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Celular</title>
+    <link rel="stylesheet" href="/css/Tarjetas.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Tarjeta de Celular -->
+    <div class="card">
+        <!-- Imagen del celular -->
+        <div class="card-img-container">
+            <img src="https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.large.jpg" class="card-img-top" alt="Iphone 14 Pro">
+        </div>
+
+        <!-- Detalles del celular -->
+        <div class="card-body container">
+            <h5 class="card-title">iPhone 14 Pro</h5>
+            <p class="card-text text-justify" id="cardDescription">
+                Descripción: El iPhone 14 Pro es el último dispositivo de Apple, equipado con la última tecnología en cámaras, rendimiento de alta velocidad y pantalla OLED super retina. Diseñado para aquellos que buscan el máximo rendimiento en un smartphone.
+            </p>
+
+            <h6 class="card-subtitle mb-2 text-muted">Especificaciones</h6>
+            <p class="card-text" id="cardSpecifications">
+                Pantalla: 6.1 pulgadas OLED<br>
+                Procesador: A16 Bionic<br>
+                Memoria: 128GB / 256GB / 512GB<br>
+                Cámaras: 48MP principal, 12MP ultra gran angular<br>
+                Batería: 3200 mAh
+            </p>
+
+            <!-- Precio del celular -->
+            <p class="card-text" id="cardPrice"><strong>Precio:</strong> $1,099 USD</p>
+
+            <!-- Calificación -->
+            <div class="rating" id="cardRating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+
+            <!-- Botones CRUD -->
+            <div class="container text-center mt-3">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#updateModal">Actualizar</button>
+                <button class="btn btn-info">Leer</button>
+                <button class="btn btn-danger">Borrar</button>
+            </div>
+
+            <!-- Pie de página -->
+            <div class="container pie-pagina mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Campos de entrada para interacciones CRUD -->
+                        <div class="card-footer">
+                            <input type="text" id="productNameInput" class="form-control mb-2" placeholder="Nombre del celular...">
+                            <input type="text" id="opinionInput" class="form-control mb-2" placeholder="Escribe tu opinión...">
+                            <input type="text" id="suggestionInput" class="form-control mb-2" placeholder="Escribe qué celular te gustaría ver...">
+                            <input type="text" id="websiteInput" class="form-control mb-2" placeholder="Escribe tu opinión sobre la página web...">
+
+                            <!-- Botón para enviar opiniones -->
+                            <button class="btn btn-secondary btn-block" onclick="enviarOpiniones()">Enviar Opiniones</button>
+                        </div>
+
+                        <!-- Botón de volver -->
+                        <div class="card-body text-center mt-3">
+                            <a href="http://localhost:3000" class="btn btn-primary">VOLVER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Modal de Actualización -->
+   <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateModalLabel">Actualizar Información del Celular</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="updateForm">
+                    <div class="form-group">
+                        <label for="updateName">Nombre del Celular</label>
+                        <input type="text" class="form-control" id="updateName" placeholder="Nombre del celular">
+                    </div>
+                    <div class="form-group">
+                        <label for="updateDescription">Descripción</label>
+                        <textarea class="form-control" id="updateDescription" rows="3" placeholder="Descripción del celular"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateSpecifications">Especificaciones</label>
+                        <textarea class="form-control" id="updateSpecifications" rows="5" placeholder="Especificaciones del celular"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="updatePrice">Precio</label>
+                        <input type="text" class="form-control" id="updatePrice" placeholder="Precio del celular">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery, Popper.js, y Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Configuración inicial
+    document.addEventListener('DOMContentLoaded', function() {
+        var cellPhoneKey = 'cellPhone4'; // Clave única para Tarjeta1
+
+        var cellPhone = JSON.parse(localStorage.getItem(cellPhoneKey)) || {
+            name: 'iPhone 14 Pro',
+            description: 'Descripción: El iPhone 14 Pro es el último dispositivo de Apple...',
+            specifications: 'Pantalla: 6.1 pulgadas OLED\nProcesador: A16 Bionic\nMemoria: 128GB / 256GB / 512GB\nCámaras: 48MP principal, 12MP ultra gran angular\nBatería: 3200 mAh',
+            price: '$1,099 USD'
+        };
+
+        document.querySelector('.card-title').textContent = cellPhone.name;
+        document.getElementById('cardDescription').innerHTML = cellPhone.description;
+        document.getElementById('cardSpecifications').innerHTML = cellPhone.specifications.replace(/\n/g, '<br>');
+        document.getElementById('cardPrice').innerHTML = `<strong>Precio:</strong> ${cellPhone.price}`;
+    });
+
+    // Guardar cambios en el almacenamiento local
+    document.getElementById('updateForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var cellPhoneKey = 'cellPhone4'; // Clave única para Tarjeta1
+
+        var cellPhone = {
+            name: document.getElementById('updateName').value,
+            description: document.getElementById('updateDescription').value,
+            specifications: document.getElementById('updateSpecifications').value,
+            price: document.getElementById('updatePrice').value
+        };
+
+        // Actualizar la tarjeta con los nuevos datos
+        document.querySelector('.card-title').textContent = cellPhone.name;
+        document.getElementById('cardDescription').innerHTML = cellPhone.description;
+        document.getElementById('cardSpecifications').innerHTML = cellPhone.specifications.replace(/\n/g, '<br>');
+        document.getElementById('cardPrice').innerHTML = `<strong>Precio:</strong> ${cellPhone.price}`;
+
+        // Cerrar el modal
+        $('#updateModal').modal('hide');
+
+        // Guardar la actualización en almacenamiento local
+        localStorage.setItem(cellPhoneKey, JSON.stringify(cellPhone));
+    });
+
+    // Prellenar el modal al abrirlo
+    $('#updateModal').on('show.bs.modal', function () {
+        var cellPhoneKey = 'cellPhone4'; // Clave única para Tarjeta
+        var cellPhone = JSON.parse(localStorage.getItem(cellPhoneKey)) || {
+            name: 'iPhone 14 Pro',
+            description: 'Descripción: El iPhone 14 Pro es el último dispositivo de Apple...',
+            specifications: 'Pantalla: 6.1 pulgadas OLED\nProcesador: A16 Bionic\nMemoria: 128GB / 256GB / 512GB\nCámaras: 48MP principal, 12MP ultra gran angular\nBatería: 3200 mAh',
+            price: '$1,099 USD'
+        };
+
+        document.getElementById('updateName').value = cellPhone.name;
+        document.getElementById('updateDescription').value = cellPhone.description;
+        document.getElementById('updateSpecifications').value = cellPhone.specifications;
+        document.getElementById('updatePrice').value = cellPhone.price;
+    });
+</script>
+</body>
+</html>

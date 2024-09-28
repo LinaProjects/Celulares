@@ -1,0 +1,44 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "c0219d8a-ac68-4064-a765-35f1394ab440",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1725585654264"
+        }
+      },
+      "favorite": {
+        "name": "Prueba"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      }
+    },
+    {
+      "id": "df2071ae-e58c-446a-be56-285984dabf39",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1725581593758"
+        }
+      },
+      "favorite": {
+        "name": "Celulares"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      }
+    }
+  ]
+}
